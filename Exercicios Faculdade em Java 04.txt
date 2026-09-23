@@ -1,0 +1,398 @@
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner ler = new Scanner(System.in);
+
+        int idade, contador = 0;
+        double altura, soma_alturas = 0;
+
+        for (int i = 1; i <= 20; i++) {
+
+            System.out.print("Digite a idade: ");
+            idade = ler.nextInt();
+
+            System.out.print("Digite a altura: ");
+            altura = ler.nextDouble();
+
+            if (idade > 50) {
+                soma_alturas += altura;
+                contador++;
+            }
+        }
+
+        if (contador > 0) {
+            double media_alturas = soma_alturas / contador;
+            System.out.println("Media das alturas: " + media_alturas);
+        } else {
+            System.out.println("Nao ha pessoas com mais de 50 anos.");
+        }
+    }
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner ler = new Scanner(System.in);
+
+        int idade, opiniao;
+        int soma_idades_otimo = 0, qtd_otimo = 0;
+        int qtd_regular = 0, qtd_bom = 0;
+
+        for (int i = 1; i <= 15; i++) {
+
+            System.out.print("Digite a idade: ");
+            idade = ler.nextInt();
+
+            System.out.print("Digite a opiniao (3-otimo, 2-bom, 1-regular): ");
+            opiniao = ler.nextInt();
+
+            if (opiniao == 3) {
+                soma_idades_otimo += idade;
+                qtd_otimo++;
+            } else if (opiniao == 2) {
+                qtd_bom++;
+            } else if (opiniao == 1) {
+                qtd_regular++;
+            }
+        }
+
+        if (qtd_otimo > 0) {
+            double media_idades_otimo = (double) soma_idades_otimo / qtd_otimo;
+            System.out.println("Media das idades (otimo): " + media_idades_otimo);
+        } else {
+            System.out.println("Nao houve respostas otimo");
+        }
+
+        System.out.println("Quantidade de regular: " + qtd_regular);
+
+        double porcentagem_bom = (qtd_bom * 100.0) / 15;
+        System.out.println("Porcentagem de bom: " + porcentagem_bom + "%");
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+public class Main {
+    public static void main(String[] args) {
+
+        for (int i = 1; i <= 10; i++) {
+
+            System.out.println("Tabuada do " + i);
+
+            for (int j = 1; j <= 10; j++) {
+                System.out.println(i + " x " + j + " = " + (i * j));
+            }
+
+            System.out.println();
+        }
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner ler = new Scanner(System.in);
+
+        int idade, qtd_mais_50 = 0, qtd_10_20 = 0, qtd_peso_40 = 0;
+        double altura, peso, soma_alturas = 0;
+
+        for (int i = 1; i <= 15; i++) {
+
+            System.out.print("Idade: ");
+            idade = ler.nextInt();
+
+            System.out.print("Altura: ");
+            altura = ler.nextDouble();
+
+            System.out.print("Peso: ");
+            peso = ler.nextDouble();
+
+            if (idade > 50) {
+                qtd_mais_50++;
+            }
+
+            if (idade >= 10 && idade <= 20) {
+                soma_alturas += altura;
+                qtd_10_20++;
+            }
+
+            if (peso < 40) {
+                qtd_peso_40++;
+            }
+        }
+
+        System.out.println("Quantidade > 50: " + qtd_mais_50);
+
+        if (qtd_10_20 > 0) {
+            double media_alturas = soma_alturas / qtd_10_20;
+            System.out.println("Media alturas (10-20): " + media_alturas);
+        }
+
+        double porcentagem = (qtd_peso_40 * 100.0) / 15;
+        System.out.println("Porcentagem peso < 40: " + porcentagem + "%");
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner ler = new Scanner(System.in);
+
+        int idade, qtd_c = 0, qtd_s = 0, qtd_v = 0, qtd_d = 0, soma_idade_v = 0;
+        char estado;
+
+        for (int i = 1; i <= 20; i++) {
+
+            System.out.print("Idade: ");
+            idade = ler.nextInt();
+
+            System.out.print("Estado civil (C/S/V/D): ");
+            estado = ler.next().charAt(0);
+
+            if (estado == 'C' || estado == 'c') {
+                qtd_c++;
+            } else if (estado == 'S' || estado == 's') {
+                qtd_s++;
+            } else if (estado == 'V' || estado == 'v') {
+                qtd_v++;
+                soma_idade_v += idade;
+            } else if (estado == 'D' || estado == 'd') {
+                qtd_d++;
+            }
+        }
+
+        System.out.println("Casados: " + qtd_c);
+        System.out.println("Solteiros: " + qtd_s);
+
+        if (qtd_v > 0) {
+            double media = (double) soma_idade_v / qtd_v;
+            System.out.println("Media idades viuvos: " + media);
+        }
+
+        double porcentagem = (qtd_d * 100.0) / 20;
+        System.out.println("Porcentagem desquitados: " + porcentagem + "%");
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner ler = new Scanner(System.in);
+
+        int idade, qtd_m = 0, qtd_f = 0, soma_idade_m = 0;
+        double peso, soma_peso_f = 0;
+        char sexo;
+
+        for (int i = 1; i <= 10; i++) {
+
+            System.out.print("Idade: ");
+            idade = ler.nextInt();
+
+            System.out.print("Peso: ");
+            peso = ler.nextDouble();
+
+            System.out.print("Sexo (M/F): ");
+            sexo = ler.next().charAt(0);
+
+            if (sexo == 'M' || sexo == 'm') {
+                qtd_m++;
+                soma_idade_m += idade;
+            } else if (sexo == 'F' || sexo == 'f') {
+                qtd_f++;
+                soma_peso_f += peso;
+            }
+        }
+
+        System.out.println("Homens: " + qtd_m);
+        System.out.println("Mulheres: " + qtd_f);
+
+        if (qtd_m > 0) {
+            double media_idade = (double) soma_idade_m / qtd_m;
+            System.out.println("Media idade homens: " + media_idade);
+        }
+
+        if (qtd_f > 0) {
+            double media_peso = soma_peso_f / qtd_f;
+            System.out.println("Media peso mulheres: " + media_peso);
+        }
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner ler = new Scanner(System.in);
+
+        int idade, qtd_maior = 0;
+
+        for (int i = 1; i <= 10; i++) {
+
+            System.out.print("Idade: ");
+            idade = ler.nextInt();
+
+            if (idade >= 18) {
+                qtd_maior++;
+            }
+        }
+
+        System.out.println("Maiores de idade: " + qtd_maior);
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner ler = new Scanner(System.in);
+
+        int idade;
+        int f1 = 0, f2 = 0, f3 = 0, f4 = 0, f5 = 0;
+
+        for (int i = 1; i <= 15; i++) {
+
+            System.out.print("Idade: ");
+            idade = ler.nextInt();
+
+            if (idade <= 15) f1++;
+            else if (idade <= 30) f2++;
+            else if (idade <= 45) f3++;
+            else if (idade <= 60) f4++;
+            else f5++;
+        }
+
+        System.out.println("1-15: " + f1);
+        System.out.println("16-30: " + f2);
+        System.out.println("31-45: " + f3);
+        System.out.println("46-60: " + f4);
+        System.out.println("61+: " + f5);
+
+        System.out.println("Porcentagens:");
+        System.out.println((f1 * 100.0) / 15 + "%");
+        System.out.println((f2 * 100.0) / 15 + "%");
+        System.out.println((f3 * 100.0) / 15 + "%");
+        System.out.println((f4 * 100.0) / 15 + "%");
+        System.out.println((f5 * 100.0) / 15 + "%");
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner ler = new Scanner(System.in);
+
+        int num, maior = 0, menor = 0;
+        boolean primeiro = true;
+
+        while (true) {
+
+            System.out.print("Numero: ");
+            num = ler.nextInt();
+
+            if (num == 0) break;
+
+            if (num < 0) {
+                System.out.println("Valor negativo!");
+                continue;
+            }
+
+            if (primeiro) {
+                maior = num;
+                menor = num;
+                primeiro = false;
+            } else {
+                if (num > maior) maior = num;
+                if (num < menor) menor = num;
+            }
+        }
+
+        if (!primeiro) {
+            System.out.println("Maior: " + maior);
+            System.out.println("Menor: " + menor);
+        }
+    }
+}
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner ler = new Scanner(System.in);
+
+        double altura, maior = 0, menor = 0, soma_f = 0;
+        int qtd_m = 0, qtd_f = 0;
+        char sexo;
+
+        for (int i = 1; i <= 15; i++) {
+
+            System.out.print("Altura: ");
+            altura = ler.nextDouble();
+
+            System.out.print("Sexo (M/F): ");
+            sexo = ler.next().charAt(0);
+
+            if (i == 1) {
+                maior = altura;
+                menor = altura;
+            } else {
+                if (altura > maior) maior = altura;
+                if (altura < menor) menor = altura;
+            }
+
+            if (sexo == 'M' || sexo == 'm') {
+                qtd_m++;
+            } else {
+                qtd_f++;
+                soma_f += altura;
+            }
+        }
+
+        System.out.println("Maior altura: " + maior);
+        System.out.println("Menor altura: " + menor);
+
+        if (qtd_f > 0) {
+            double media = soma_f / qtd_f;
+            System.out.println("Media altura mulheres: " + media);
+        }
+
+        System.out.println("Homens: " + qtd_m);
+    }
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner ler = new Scanner(System.in);
+
+        int num, qtd_pos = 0, qtd_neg = 0;
+
+        for (int i = 1; i <= 10; i++) {
+
+            System.out.print("Numero: ");
+            num = ler.nextInt();
+
+            if (num >= 0) qtd_pos++;
+            else qtd_neg++;
+        }
+
+        System.out.println("Positivos: " + qtd_pos);
+        System.out.println("Negativos: " + qtd_neg);
+    }
+}
