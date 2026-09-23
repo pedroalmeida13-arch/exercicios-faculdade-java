@@ -1,0 +1,288 @@
+Pedro Otávio Almeida Faria Albino
+Atividade de Laboratório de Programação
+Prof. Guilherme
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+package com.mycompany.lista050326;
+import java.util.Scanner;
+/**
+ *
+ * @author pedro
+ */
+public class Exercicio01 {
+
+    public static void main(String[] args) {
+        
+        Scanner ler = new Scanner(System.in);
+        double largura, comp, area;
+        
+        System.out.println("informe a largura: ");
+        largura = ler.nextDouble();
+        
+        System.out.println("informe o comprimento: ");
+        comp =  ler.nextDouble();
+        area = largura * comp;
+        
+        System.out.println("a area do terreno é: " + area);
+        
+        
+        
+    }
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+package com.mycompany.lista050326;
+import java.util.Scanner;
+/**
+ *
+ * @author pedro
+ */
+public class Exercicio02 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        Scanner ler = new Scanner (System.in);
+        double ferradura, cavalo;
+       
+        System.out.println("informe o numero de cavalos: ");
+        cavalo = ler.nextDouble();
+        ferradura = cavalo*4;
+        
+        System.out.println("o numero de ferraduras necessarias é: " + ferradura);
+        
+       
+       
+    }
+    
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+package com.mycompany.lista050326;
+import java.util.Scanner;
+/**
+ *
+ * @author pedro
+ */
+public class Exercicio03 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        Scanner ler = new Scanner (System.in);
+        double c_peq, c_med, c_grande, valor;
+        
+        System.out.println("informe o numero de camisas pequenas: ");
+        c_peq = ler.nextDouble();
+        
+        System.out.println("informe o numero de camisas medias: ");
+        c_med = ler.nextDouble();
+        
+        System.out.println("informe o numero de camisas grandes: ");
+        c_grande = ler.nextDouble();
+        
+        valor = (10*c_peq)+(12*c_med)+(15*c_grande);
+        
+        System.out.println("o valor total arrecadado é: "+ valor);
+        
+
+                }
+    
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ackage com.mycompany.lista050326;
+import java.util.Scanner;
+
+/**
+ *
+ * @author pedro
+ */
+public class Exercicio04 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        Scanner ler = new Scanner (System.in);
+        double anos, meses, dias;
+        
+        System.out.println("informe quando foi o ultimo acidente: ");
+        dias = ler.nextInt();
+        meses = dias/30;
+        anos = dias/365;
+        
+        
+        
+        
+        System.out.println("o ultimo acidente em anos foi há: " + anos);
+        System.out.println("o ultimo acidente em meses foi há: " + meses);
+        System.out.println("o ultimo acidente em dias foi há: " + dias); 
+        
+    }
+    
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+package com.mycompany.lista050326;
+import java.util.Scanner;
+
+/**
+ *
+ * @author pedro
+ */
+public class Exercicio05 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+       
+        
+        Scanner ler = new Scanner (System.in);
+        double salario, s_aumento, imposto, s_final;
+        
+        System.out.println("informe o salario: ");
+        salario = ler.nextDouble();
+        s_aumento = salario + (salario * 0.15);
+        imposto = s_aumento * 0.08;
+        s_final = s_aumento - imposto;
+        
+        
+        System.out.println("o salario com aumento é: " + s_aumento);
+        System.out.println("o total de desconto é: " + imposto);
+        System.out.println("o salario final é: " + s_final);
+            
+        
+        
+        
+        
+       }
+    
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+package com.mycompany.lista050326;
+import java.util.Scanner;
+
+
+/**
+ *
+ * @author pedro
+ */
+public class Exercicio06 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        
+        Scanner ler = new Scanner (System.in);
+        double frango, a_dir, a_esq, custo;
+        
+        System.out.println("informe o numero total de frangos: ");
+        frango = ler.nextDouble();
+        
+        a_dir = frango * 4;
+        a_esq = frango * 7;
+        custo = a_esq + a_dir;
+        
+        System.out.println("o custo total é:" + custo);
+        
+    }
+    
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+package com.mycompany.lista050326;
+import java.util.Scanner;
+
+/**
+ *
+ * @author pedro
+ */
+public class Exercicio07 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        
+        Scanner ler = new Scanner (System.in);
+        double h_normal, h_extras, s_liq, s_final;
+        
+        System.out.println("informe o total de horas normais trabalhadas:");
+        h_normal = ler.nextDouble();
+        
+        System.out.println("informe o total de horas extras: ");
+        h_extras = ler.nextDouble();
+        
+        s_liq = (h_normal*10)+(h_extras*15);
+        s_final = s_liq - (s_liq*0.1);
+        
+        System.out.println("o valor do seu salario final é: " + s_final);
+        
+    }
+    
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+package com.mycompany.lista050326;
+import java.util.Scanner;
+
+/**
+ *
+ * @author pedro
+ */
+public class Exercicio08 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        Scanner ler = new Scanner (System.in);
+        double p_gasolina, v_pagamento, l_tanque;
+        
+        System.out.println("informe o preço da gasolina: ");
+        p_gasolina = ler.nextDouble();
+        
+        System.out.println("informe o valor do pagamento: ");  
+        v_pagamento = ler.nextDouble();
+        
+        l_tanque = v_pagamento/p_gasolina;
+        
+        System.out.println("você abasteceu seu carro com: " + l_tanque);
+    }
+    
+}
