@@ -1,0 +1,122 @@
+lista exercícios Guilherme 03/05/2026
+
+
+
+import java.util.Scanner;
+
+public class exercicio1 {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+
+        double nota;
+
+        System.out.println("Digite as notas (negativa para parar): ");
+        nota = ler.nextDouble();
+
+        while (nota >= 0) {
+
+            if (nota >= 7 && nota <= 10) {
+                System.out.println("Aprovado");
+            } else if (nota >= 5) {
+                System.out.println("Recuperacao");
+            } else {
+                System.out.println("Reprovado");
+            }
+
+            nota = ler.nextDouble();
+        }
+
+        System.out.println("Fim do programa");
+    }
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+import java.util.Scanner;
+
+public class exercicio2 {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+
+        int idade;
+        int menores = 0;
+        int maiores = 0;
+
+        System.out.println("Digite as idades (-1 para parar): ");
+        idade = ler.nextInt();
+
+        while (idade != -1) {
+
+            if (idade < 18) {
+                menores++;
+            } else {
+                maiores++;
+            }
+
+            idade = ler.nextInt();
+        }
+
+        System.out.println("Menores de idade: " + menores);
+        System.out.println("Maiores de idade: " + maiores);
+    }
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+import java.util.Scanner;
+
+public class exercicio3 {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+
+        int n;
+        int contador = 0;
+
+        System.out.println("Digite o valor de N: ");
+        n = ler.nextInt();
+
+        while (contador <= n) {
+            System.out.println(contador);
+            contador++;
+        }
+    }
+}
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+import java.util.Scanner;
+
+public class exercicio4 {
+    public static void main(String[] args) {
+        Scanner ler = new Scanner(System.in);
+
+        int idade;
+        int soma_idades = 0;
+        int quantidade = 0;
+        double media;
+
+        System.out.println("Digite as idades (0 para parar): ");
+        idade = ler.nextInt();
+
+        while (idade != 0) {
+
+            soma_idades += idade;
+            quantidade++;
+
+            idade = ler.nextInt();
+        }
+
+        if (quantidade > 0) {
+            media = (double) soma_idades / quantidade;
+            System.out.println("Media das idades: " + media);
+        } else {
+            System.out.println("Nenhuma idade foi digitada");
+        }
+    }
+}
